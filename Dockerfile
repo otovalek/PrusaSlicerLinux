@@ -2,7 +2,7 @@ FROM debian:trixie-slim AS build
 RUN apt-get update && apt-get upgrade --yes
 RUN apt-get install --yes --no-install-recommends ca-certificates libtool git build-essential automake cmake texinfo libglu1-mesa-dev libdbus-1-dev libwebkit2gtk-4.1-dev libhidapi-dev
 
-ARG VERSION=2.9.5
+ARG VERSION=2.9.6
 ADD https://github.com/prusa3d/PrusaSlicer.git#version_$VERSION /source
 
 WORKDIR /source
